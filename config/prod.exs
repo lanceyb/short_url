@@ -22,7 +22,7 @@ config :short_url, ShortUrlWeb.Endpoint,
 config :logger, level: :info
 
 config :redix,
-  args: [ host: "127.0.0.1", port: 6379, "123abc" ]
+  args: [ host: "127.0.0.1", port: 6379, password: "" ]
 
 # ## SSL Support
 #
