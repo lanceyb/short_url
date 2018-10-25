@@ -1,0 +1,3 @@
+<div>
+  <h2>Redirect to <%= @code %></h2>
+</div>
