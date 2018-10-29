@@ -39,7 +39,8 @@ defmodule ShortUrl.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
-      {:redix, ">= 0.0.0"}
+      {:redix, ">= 0.0.0"},
+      {:logger_file_backend, ">= 0.0.10"}
     ]
   end
 end
