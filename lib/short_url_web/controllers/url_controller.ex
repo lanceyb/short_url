@@ -15,13 +15,12 @@ defmodule ShortUrlWeb.UrlController do
   end
 
   def create(conn, %{ "url" => url } = _params) do
-    json conn, %{ biz_action: 1 }
-    #val = set_id() |> case do
-    #  {:ok, id} -> %{ biz_action: 0, biz_msg: "ok", data: %{ id: store_url(id, url) } }
-    #  _ -> %{ biz_action: 1, biz_msg: "fail", data: %{} }
-    #end
+    val = set_id() |> case do
+      {:ok, id} -> %{ biz_action: 0, biz_msg: "ok", data: %{ id: store_url(id, url) } }
+      _ -> %{ biz_action: 1, biz_msg: "fail", data: %{} }
+    end
 
-    #json conn, val
+    json conn, val
   end
 
   def get_url_by_code(code) do
