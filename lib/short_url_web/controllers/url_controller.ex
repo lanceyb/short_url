@@ -30,9 +30,9 @@ defmodule ShortUrlWeb.UrlController do
   end
 
   def store_url(id, url) do
-    if id === 1 do
-      expire_hashed()
-    end
+    #if id === 1 do
+    #  expire_hashed()
+    #end
 
     code = String.pad_leading(List.to_string(ShortUrl.ThirtyFourCal.tranform(id)), 3, "0")
     ShortUrl.Redix.command(["HMSET", hashed_key(), code, url])
